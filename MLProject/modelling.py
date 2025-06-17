@@ -29,7 +29,6 @@ if __name__ == "__main__":
         mlflow.log_param("max_depth", args.max_depth)
         mlflow.log_param("min_samples_split", args.min_samples_split)
         mlflow.log_param("min_samples_leaf", args.min_samples_leaf)
-        mlflow.log_param("random_state", args.random_state)
 
         model = RandomForestRegressor(
             n_estimators=args.n_estimators,
