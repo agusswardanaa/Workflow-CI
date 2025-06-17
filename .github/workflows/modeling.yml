@@ -1,0 +1,40 @@
+name: Train Model with MLflow
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  train-model:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12.7"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install mlflow
+
+      - name: Run training with MLflow
+        run: |
+          mlflow run MLProject -P n_estimators=150 -P max_depth=12 -P min_samples_split=3 -P min_samples_leaf=2
+
+      - name: Commit and push to master
+        run: |
+          git config --global user.name "${{ secrets.username }}"
+          git config --global user.email "${{ secrets.email }}"
+          git fetch origin master
+          git checkout master
+          git merge main --no-edit
+          git add mlruns/
+          git commit -m "Merge log from main and add mlruns" || echo "No changes to commit"
+          git push origin master
