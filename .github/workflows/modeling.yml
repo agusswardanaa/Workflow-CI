@@ -14,17 +14,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - name: Set up Miniconda
+        uses: conda-incubator/setup-miniconda@v3
         with:
-          python-version: "3.12.7"
+          auto-activate-base: false
+          environment-file: conda.yaml
+          activate-environment: mlflow-env
 
-      - name: Install dependencies
+      - name: Install MLflow
         run: |
-          pip install --upgrade pip
-          pip install mlflow
+          pip install mlflow==2.19.0
 
       - name: Run training with MLflow
+        shell: bash -l {0}
         run: |
           mlflow run MLProject -P n_estimators=150 -P max_depth=12 -P min_samples_split=3 -P min_samples_leaf=2
 
