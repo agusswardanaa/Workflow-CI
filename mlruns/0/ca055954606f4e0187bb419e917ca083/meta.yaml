@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/Workflow-CI/Workflow-CI/mlruns/0/ca055954606f4e0187bb419e917ca083/artifacts
+end_time: 1750210643182
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ca055954606f4e0187bb419e917ca083
+run_name: merciful-cat-719
+run_uuid: ca055954606f4e0187bb419e917ca083
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750210604145
+status: 3
+tags: []
+user_id: runner
