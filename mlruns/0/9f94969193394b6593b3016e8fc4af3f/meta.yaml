@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/Workflow-CI/Workflow-CI/mlruns/0/9f94969193394b6593b3016e8fc4af3f/artifacts
+end_time: 1750209825244
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9f94969193394b6593b3016e8fc4af3f
+run_name: handsome-bass-134
+run_uuid: 9f94969193394b6593b3016e8fc4af3f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750209788290
+status: 3
+tags: []
+user_id: runner
