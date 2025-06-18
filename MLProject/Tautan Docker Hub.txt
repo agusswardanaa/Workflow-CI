@@ -1,1 +1,1 @@
-https://hub.docker.com/repository/docker/agusswardanaa/modeling-workflow
+https://hub.docker.com/r/agusswardanaa/modeling-workflow
