@@ -39,10 +39,13 @@ if __name__ == "__main__":
         )
 
         model.fit(X_train, Y_train)
-        Y_pred = model.predict(X_test)
 
         # Log model
-        mlflow.sklearn.log_model(model, "model")
+        mlflow.sklearn.log_model(
+            sk_model=model,
+            artifact_path="model",
+            code_paths=["MLProject"]
+        )
 
         # Y prediction
         Y_train_pred = model.predict(X_train)
