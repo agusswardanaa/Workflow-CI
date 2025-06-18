@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import mlflow
+import mlflow.sklearn
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import argparse
@@ -39,6 +40,9 @@ if __name__ == "__main__":
 
         model.fit(X_train, Y_train)
         Y_pred = model.predict(X_test)
+
+        # Log model
+        mlflow.sklearn.log_model(model, "model")
 
         # Y prediction
         Y_train_pred = model.predict(X_train)
