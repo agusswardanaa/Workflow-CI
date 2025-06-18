@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/Workflow-CI/Workflow-CI/mlruns/0/17d8473efe5d4553b55f1956e721803e/artifacts
+end_time: 1750210135022
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 17d8473efe5d4553b55f1956e721803e
+run_name: invincible-dog-281
+run_uuid: 17d8473efe5d4553b55f1956e721803e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750210098717
+status: 3
+tags: []
+user_id: runner
