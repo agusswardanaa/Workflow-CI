@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/Workflow-CI/Workflow-CI/mlruns/0/72b08cc26aa44d3c9df06f394339706e/artifacts
+end_time: 1750208130997
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 72b08cc26aa44d3c9df06f394339706e
+run_name: glamorous-worm-820
+run_uuid: 72b08cc26aa44d3c9df06f394339706e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750208094558
+status: 3
+tags: []
+user_id: runner
